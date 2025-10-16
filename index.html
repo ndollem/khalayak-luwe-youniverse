@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khalayak Luwe Youniverse - QRIS UMKM Digital</title>
+    <meta name="description" content="Pusat pembayaran digital QRIS untuk UMKM lokal. Bayar mudah, dukung usaha kecil!">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+
+    <script>
+        // Function to download image
+        function downloadImage(imageUrl, filename) {
+            fetch(imageUrl)
+                .then(response => response.blob())
+                .then(blob => {
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.style.display = 'none';
+                    a.href = url;
+                    a.download = filename;
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    document.body.removeChild(a);
+                })
+                .catch(error => {
+                    console.error('Download failed:', error);
+                    // Fallback: open in new tab if download fails
+                    window.open(imageUrl, '_blank');
+                });
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+
+    <!-- Header -->
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <div class="text-center">
+                <div class="flex flex-col items-center mb-4">
+                    <img src="img/logo.jpg" alt="Khalayak Luwe Youniverse Logo"
+                        class="h-20 w-20 md:h-24 md:w-24 rounded-full object-cover shadow-md mb-3">
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900">
+                        Khalayak Luwe Youniverse
+                    </h1>
+                </div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Pusat pembayaran digital QRIS untuk UMKM sahabat.
+                    <span class="font-medium text-blue-600">Bayar mudah, dukung usaha lokal! 💙</span>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 py-8">
+
+        <!-- Grid Card Lapak -->
+        <div class="max-w-2xl mx-auto space-y-6 mb-8">
+
+            <!-- Lapak 1: Cunah Culinary -->
+            <div
+                class="bg-blue-100 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 overflow-hidden border border-blue-200">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <div class="bg-blue-500 text-white rounded-full p-2 mr-3">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900">Cunah Culinary</h3>
+                                <p class="text-sm text-gray-600">Bu Cunah</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/+6281234567890" target="_blank"
+                            class="bg-green-500 hover:bg-green-600 text-white rounded-full p-2 transition-colors duration-200">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.103" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-gray-700 mb-2">
+                        Spesialis masakan rumahan berkualitas tinggi dengan cita rasa autentik Jawa.
+                    </p>
+                    <div class="mb-4">
+                        <p class="text-sm font-medium text-blue-700 mb-1">Produk Unggulan:</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="bg-blue-200 text-blue-800 text-xs px-2 py-1 rounded-full">Nasi Gudeg</span>
+                            <span class="bg-blue-200 text-blue-800 text-xs px-2 py-1 rounded-full">Ayam Bakar</span>
+                            <span class="bg-blue-200 text-blue-800 text-xs px-2 py-1 rounded-full">Sambal Terasi</span>
+                            <span class="bg-blue-200 text-blue-800 text-xs px-2 py-1 rounded-full">Tahu Tempe</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative inline-block">
+                            <img src="img/cunah-culinary.jpeg" alt="QRIS Cunah Culinary"
+                                class="max-w-xs mx-auto rounded-lg border border-blue-300 shadow-sm">
+                            <button onclick="downloadImage('img/cunah-culinary.jpeg', 'cunah-culinary-qris.jpeg')"
+                                class="absolute -top-3 -right-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition-colors duration-200">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">📱 Download & bayar dengan mudah</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lapak 2: Dapur Runa -->
+            <div
+                class="bg-green-100 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 overflow-hidden border border-green-200">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <div class="bg-green-500 text-white rounded-full p-2 mr-3">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900">Dapur Runa</h3>
+                                <p class="text-sm text-gray-600">Mbak Runa</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/+6281234567891" target="_blank"
+                            class="bg-green-500 hover:bg-green-600 text-white rounded-full p-2 transition-colors duration-200">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.103" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-gray-700 mb-2">
+                        Katering sehat dan bergizi untuk keluarga dengan menu harian yang bervariasi.
+                    </p>
+                    <div class="mb-4">
+                        <p class="text-sm font-medium text-green-700 mb-1">Produk Unggulan:</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="bg-green-200 text-green-800 text-xs px-2 py-1 rounded-full">Nasi Kotak</span>
+                            <span class="bg-green-200 text-green-800 text-xs px-2 py-1 rounded-full">Sayur Asem</span>
+                            <span class="bg-green-200 text-green-800 text-xs px-2 py-1 rounded-full">Ikan Bakar</span>
+                            <span class="bg-green-200 text-green-800 text-xs px-2 py-1 rounded-full">Gado-gado</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative inline-block">
+                            <img src="img/dapur-runa.jpeg" alt="QRIS Dapur Runa"
+                                class="max-w-xs mx-auto rounded-lg border border-green-300 shadow-sm">
+                            <button onclick="downloadImage('img/dapur-runa.jpeg', 'dapur-runa-qris.jpeg')"
+                                class="absolute -top-3 -right-3 bg-green-500 hover:bg-green-600 text-white rounded-full p-2 shadow-lg transition-colors duration-200">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">📱 Download & bayar dengan mudah</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lapak 3: Harumsari -->
+            <div
+                class="bg-pink-100 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 overflow-hidden border border-pink-200">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <div class="bg-pink-500 text-white rounded-full p-2 mr-3">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900">Harumsari</h3>
+                                <p class="text-sm text-gray-600">Pak Harum</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/+6281234567892" target="_blank"
+                            class="bg-green-500 hover:bg-green-600 text-white rounded-full p-2 transition-colors duration-200">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.103" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-gray-700 mb-2">
+                        Warung kopi dan cemilan tradisional dengan suasana hangat dan ramah.
+                    </p>
+                    <div class="mb-4">
+                        <p class="text-sm font-medium text-pink-700 mb-1">Produk Unggulan:</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="bg-pink-200 text-pink-800 text-xs px-2 py-1 rounded-full">Kopi Tubruk</span>
+                            <span class="bg-pink-200 text-pink-800 text-xs px-2 py-1 rounded-full">Pisang Goreng</span>
+                            <span class="bg-pink-200 text-pink-800 text-xs px-2 py-1 rounded-full">Gorengan</span>
+                            <span class="bg-pink-200 text-pink-800 text-xs px-2 py-1 rounded-full">Tahu Isi</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative inline-block">
+                            <img src="img/harumsari.jpeg" alt="QRIS Harumsari"
+                                class="max-w-xs mx-auto rounded-lg border border-pink-300 shadow-sm">
+                            <button onclick="downloadImage('img/harumsari.jpeg', 'harumsari-qris.jpeg')"
+                                class="absolute -top-3 -right-3 bg-pink-500 hover:bg-pink-600 text-white rounded-full p-2 shadow-lg transition-colors duration-200">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">📱 Download & bayar dengan mudah</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lapak 4: Minibul -->
+            <div
+                class="bg-purple-100 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 overflow-hidden border border-purple-200">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <div class="bg-purple-500 text-white rounded-full p-2 mr-3">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900">Minibul</h3>
+                                <p class="text-sm text-gray-600">Mbak Mini</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/+6281234567893" target="_blank"
+                            class="bg-green-500 hover:bg-green-600 text-white rounded-full p-2 transition-colors duration-200">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.103" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-gray-700 mb-2">
+                        Toko kelontong mini serbaguna dengan lengkap kebutuhan sehari-hari.
+                    </p>
+                    <div class="mb-4">
+                        <p class="text-sm font-medium text-purple-700 mb-1">Produk Unggulan:</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="bg-purple-200 text-purple-800 text-xs px-2 py-1 rounded-full">Snack</span>
+                            <span class="bg-purple-200 text-purple-800 text-xs px-2 py-1 rounded-full">Minuman
+                                Dingin</span>
+                            <span class="bg-purple-200 text-purple-800 text-xs px-2 py-1 rounded-full">Pulsa</span>
+                            <span class="bg-purple-200 text-purple-800 text-xs px-2 py-1 rounded-full">Kebutuhan
+                                Harian</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative inline-block">
+                            <img src="img/minibul.jpeg" alt="QRIS Minibul"
+                                class="max-w-xs mx-auto rounded-lg border border-purple-300 shadow-sm">
+                            <button onclick="downloadImage('img/minibul.jpeg', 'minibul-qris.jpeg')"
+                                class="absolute -top-3 -right-3 bg-purple-500 hover:bg-purple-600 text-white rounded-full p-2 shadow-lg transition-colors duration-200">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">📱 Download & bayar dengan mudah</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lapak 5: Pawon Nyai -->
+            <div
+                class="bg-yellow-100 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 overflow-hidden border border-yellow-200">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <div class="bg-yellow-500 text-white rounded-full p-2 mr-3">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900">Pawon Nyai</h3>
+                                <p class="text-sm text-gray-600">Nyai Sari</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/+6281234567894" target="_blank"
+                            class="bg-green-500 hover:bg-green-600 text-white rounded-full p-2 transition-colors duration-200">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.103" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-gray-700 mb-2">
+                        Dapur tradisional dengan cita rasa autentik dan bumbu rahasia turun-temurun.
+                    </p>
+                    <div class="mb-4">
+                        <p class="text-sm font-medium text-yellow-700 mb-1">Produk Unggulan:</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="bg-yellow-200 text-yellow-800 text-xs px-2 py-1 rounded-full">Pecel Lele</span>
+                            <span class="bg-yellow-200 text-yellow-800 text-xs px-2 py-1 rounded-full">Ayam
+                                Penyet</span>
+                            <span class="bg-yellow-200 text-yellow-800 text-xs px-2 py-1 rounded-full">Sambal
+                                Bawang</span>
+                            <span class="bg-yellow-200 text-yellow-800 text-xs px-2 py-1 rounded-full">Mie Goreng</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative inline-block">
+                            <img src="img/pawon-nyai.jpeg" alt="QRIS Pawon Nyai"
+                                class="max-w-xs mx-auto rounded-lg border border-yellow-300 shadow-sm">
+                            <button onclick="downloadImage('img/pawon-nyai.jpeg', 'pawon-nyai-qris.jpeg')"
+                                class="absolute -top-3 -right-3 bg-yellow-500 hover:bg-yellow-600 text-white rounded-full p-2 shadow-lg transition-colors duration-200">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">📱 Download & bayar dengan mudah</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-12">
+        <div class="max-w-6xl mx-auto px-4 py-8">
+            <div class="text-center">
+                <h3 class="text-lg font-semibold text-gray-900 mb-6">
+                    📱 Cara Pembayaran QRIS
+                </h3>
+
+                <!-- Langkah-langkah Pembayaran -->
+                <div class="max-w-2xl mx-auto">
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-6 mb-6 shadow-lg">
+                        <h4 class="text-lg font-bold text-blue-900 mb-6 text-center">🚀 3 Langkah Mudah Pembayaran QRIS
+                        </h4>
+                        <div class="space-y-8">
+                            <!-- Step 1 -->
+                            <div class="text-center">
+                                <div
+                                    class="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                    <div class="bg-blue-500 rounded-full w-12 h-12 flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h5 class="font-semibold text-gray-900 mb-2 text-lg">1. Download QRIS</h5>
+                                <p class="text-sm text-gray-600 max-w-sm mx-auto">Klik tombol download di atas gambar
+                                    QRIS untuk menyimpan ke galeri</p>
+                            </div>
+
+                            <!-- Separator -->
+                            <div class="flex justify-center">
+                                <div class="w-1 h-8 bg-gradient-to-b from-blue-300 to-green-300 rounded-full"></div>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div class="text-center">
+                                <div
+                                    class="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                    <div class="bg-green-500 rounded-full w-12 h-12 flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h5 class="font-semibold text-gray-900 mb-2 text-lg">2. Buka Aplikasi</h5>
+                                <p class="text-sm text-gray-600 max-w-sm mx-auto">Buka e-wallet atau mobile banking
+                                    favorit Anda</p>
+                            </div>
+
+                            <!-- Separator -->
+                            <div class="flex justify-center">
+                                <div class="w-1 h-8 bg-gradient-to-b from-green-300 to-yellow-300 rounded-full"></div>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div class="text-center">
+                                <div
+                                    class="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                    <div class="bg-yellow-500 rounded-full w-12 h-12 flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M3 4a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm2 2V5h1v1H5zM3 13a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1v-3zm2 2v-1h1v1H5zM13 3a1 1 0 00-1 1v3a1 1 0 001 1h3a1 1 0 001-1V4a1 1 0 00-1-1h-3zm1 2v1h1V5h-1z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h5 class="font-semibold text-gray-900 mb-2 text-lg">3. Upload & Bayar</h5>
+                                <p class="text-sm text-gray-600 max-w-sm mx-auto">Pilih "Upload QR", pilih gambar yang
+                                    disimpan, dan bayar sesuai nominal</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Aplikasi yang Didukung -->
+                    <div class="bg-green-50 rounded-xl p-6 mb-6">
+                        <h4 class="text-md font-semibold text-green-900 mb-4 text-center">💳 Aplikasi Pembayaran yang
+                            Didukung</h4>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-white rounded-lg px-4 py-3 shadow-sm border border-green-200 text-center">
+                                <span class="text-sm font-medium text-gray-700">BCA Mobile</span>
+                            </div>
+                            <div class="bg-white rounded-lg px-4 py-3 shadow-sm border border-green-200 text-center">
+                                <span class="text-sm font-medium text-gray-700">OVO</span>
+                            </div>
+                            <div class="bg-white rounded-lg px-4 py-3 shadow-sm border border-green-200 text-center">
+                                <span class="text-sm font-medium text-gray-700">GoPay</span>
+                            </div>
+                            <div class="bg-white rounded-lg px-4 py-3 shadow-sm border border-green-200 text-center">
+                                <span class="text-sm font-medium text-gray-700">DANA</span>
+                            </div>
+                            <div class="bg-white rounded-lg px-4 py-3 shadow-sm border border-green-200 text-center">
+                                <span class="text-sm font-medium text-gray-700">ShopeePay</span>
+                            </div>
+                            <div class="bg-white rounded-lg px-4 py-3 shadow-sm border border-green-200 text-center">
+                                <span class="text-sm font-medium text-gray-700">LinkAja</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tips -->
+                    <div class="bg-yellow-50 rounded-xl p-5 mb-6">
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-yellow-500 rounded-full p-2 flex-shrink-0">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-yellow-800 mb-1">💡 Tips Pembayaran</h5>
+                                <p class="text-sm text-yellow-700">
+                                    Pastikan koneksi internet stabil dan saldo mencukupi sebelum melakukan pembayaran.
+                                    Periksa nama merchant sebelum konfirmasi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <p class="text-sm text-gray-600 mb-2">
+                        💙 Terima kasih telah mendukung UMKM lokal!
+                    </p>
+                    <p class="text-xs text-gray-500">
+                        Khalayak Luwe Youniverse © 2024 - Agus Salim & Friends
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
