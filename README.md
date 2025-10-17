@@ -28,8 +28,39 @@ Pusat pembayaran digital QRIS untuk UMKM sahabat. Bayar mudah, dukung usaha loka
 - **HTML5** dengan semantic markup
 - **Tailwind CSS** via CDN untuk styling
 - **Google Fonts** (Poppins) untuk tipografi
+- **JavaScript ES6+** untuk dynamic content loading
+- **JSON** untuk data management
 - **Responsive Design** dengan CSS Grid dan Flexbox
 - **GitHub Pages** ready untuk hosting
+
+## 📊 Struktur Data JavaScript
+
+Data lapak disimpan dalam variabel `shopsData` di dalam file `index.html`:
+
+```javascript
+const shopsData = {
+  "shops": [
+    {
+      "id": "shop-id",
+      "name": "Nama Lapak",
+      "owner": "Nama Pemilik",
+      "description": "Deskripsi lapak",
+      "products": ["Produk 1", "Produk 2"],
+      "qrisImage": "img/shop-qris.jpeg",
+      "whatsappNumber": "+628123456789",
+      "colorTheme": {
+        "bg": "bg-blue-100",
+        "border": "border-blue-200",
+        "icon": "bg-blue-500",
+        "tag": "bg-blue-200 text-blue-800",
+        "text": "text-blue-700",
+        "button": "bg-blue-500 hover:bg-blue-600",
+        "imageBorder": "border-blue-300"
+      }
+    }
+  ]
+};
+```
 
 ## 🚀 Cara Deploy ke GitHub Pages
 
@@ -50,7 +81,7 @@ Pusat pembayaran digital QRIS untuk UMKM sahabat. Bayar mudah, dukung usaha loka
 
 ```
 khalayak-luwe/
-├── index.html              # Halaman utama
+├── index.html              # Halaman utama (dengan data embedded)
 ├── img/                    # Folder gambar QRIS
 │   ├── cunah-culinary.jpeg
 │   ├── dapur-runa.jpeg  
@@ -81,9 +112,11 @@ khalayak-luwe/
 
 Untuk menambah lapak baru:
 1. Tambahkan gambar QRIS di folder `img/`
-2. Copy salah satu div card di `index.html`
-3. Update nama, pemilik, deskripsi, dan path gambar
-4. Pilih warna yang berbeda dari yang sudah ada
+2. Edit variabel `shopsData` di dalam file `index.html`
+3. Tambahkan objek lapak baru ke dalam array `shops`
+4. Ikuti struktur data yang sudah ada dengan ID unik
+5. Pilih warna theme yang berbeda dari yang sudah ada
+6. Website akan otomatis memuat data baru
 
 ## 📄 Lisensi
 
