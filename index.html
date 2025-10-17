@@ -64,7 +64,7 @@
                     "id": "sumasnack",
                     "name": "Sumasnack",
                     "owner": "Ule",
-                    "description": "",
+                    "description": "Sumasnack milik Ule menawarkan martabak bihun, lumpia, piscok, dan cilok lezat. Cocok untuk camilan atau teman ngobrol bersama keluarga dan teman.",
                     "products": ["martabak bihun", "lumpia", "piscok", "cilok"],
                     "qrisImage": "img/sumasnack.jpeg",
                     "whatsappNumber": "+6281945524458",
@@ -83,7 +83,7 @@
                     "id": "cunah-culinary",
                     "name": "Cunah Culinary",
                     "owner": "Cinthya",
-                    "description": "",
+                    "description": "Cunah Culinary milik Cinthya menyediakan Nasi Kotak lezat yang cocok untuk berbagai acara atau makan siang praktis.",
                     "products": ["Nasi Kotak"],
                     "qrisImage": "img/cunah-culinary.jpeg",
                     "whatsappNumber": "+6281222664480",
@@ -102,7 +102,7 @@
                     "id": "back-to-choco",
                     "name": "Back To Choco",
                     "owner": "Dani Fachrudien",
-                    "description": "",
+                    "description": "Back To Choco milik Dani Fachrudien menawarkan berbagai minuman kopi dan coklat yang nikmat. Cocok dinikmati kapan saja untuk penyemangat harimu.",
                     "products": ["Minuman Kopi dan Coklat"],
                     "qrisImage": "img/back-to-choco.jpeg",
                     "whatsappNumber": "+6282232963769",
@@ -121,7 +121,7 @@
                     "id": "pawon-nyai",
                     "name": "Pawon Nyai",
                     "owner": "Rahmat Nurjaman",
-                    "description": "",
+                    "description": "Pawon Nyai milik Rahmat Nurjaman menyajikan Mie chili dan Tahu isi ayam yang lezat, cocok untuk penggemar makanan pedas dan gurih.",
                     "products": ["Mie chili", "Tahu isi ayam"],
                     "qrisImage": "img/pawon-nyai.jpeg",
                     "whatsappNumber": "6283112276006",
@@ -140,7 +140,7 @@
                     "id": "harumsari",
                     "name": "Harumsari",
                     "owner": "Anjang",
-                    "description": "",
+                    "description": "Harumsari milik Anjang menawarkan Weci Udang dan Roti Manis lezat, cocok untuk pencinta camilan gurih maupun manis.",
                     "products": ["Weci Udang", "Roti Manis"],
                     "qrisImage": "img/harumsari.jpeg",
                     "whatsappNumber": "+6285755998533",
@@ -233,13 +233,15 @@
         // Function to get appropriate icon for each shop
         function getShopIcon(shopId) {
             const icons = {
-                'cunah-culinary': '<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>',
-                'dapur-runa': '<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" /></svg>',
-                'harumsari': '<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>',
-                'minibul': '<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" /></svg>',
-                'pawon-nyai': '<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>'
+                'cunah-culinary': '<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M6.75 2a.75.75 0 000 1.5h.75c.9 0 1.636.664 1.747 1.5h5.506c.111-.836.848-1.5 1.747-1.5h.75a.75.75 0 010 1.5h-.75a.25.25 0 00-.25.25v.05a2.75 2.75 0 112 2.7v3.25A7.75 7.75 0 1112 20a7.75 7.75 0 01-7.75-7.75v-3.25a2.75 2.75 0 112-2.7v-.05a.25.25 0 00-.25-.25h-.75a.75.75 0 010-1.5h.75c.9 0 1.636.664 1.747 1.5h5.506c.111-.836.848-1.5 1.747-1.5h.75zm5.25 14a3.25 3.25 0 100-6.5 3.25 3.25 0 000 6.5z" /></svg>',
+                'minibul': '<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="#fbbf24"/><circle cx="12" cy="12" r="6" fill="#fff"/><circle cx="12" cy="12" r="3" fill="#f59e42"/></svg>',
+                'harumsari': '<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a1 1 0 01.993.883L13 3v15.585l4.293-4.292a1 1 0 011.32-.083l.094.083a1 1 0 01.083 1.32l-.083.094-6 6a1 1 0 01-1.32.083l-.094-.083-6-6a1 1 0 011.32-1.497l.094.083L11 18.585V3a1 1 0 01.883-.993L12 2z"/></svg>',
+                'gudeg-bu-tien': '<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="10" rx="3" fill="#fde68a"/><rect x="8" y="11" width="8" height="2" rx="1" fill="#f59e42"/></svg>',
+                'kopi-kenceng': '<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19a6 6 0 0012 0M5 3h14a1 1 0 01.993.883L21 4v1a7 7 0 11-14 0V4a1 1 0 01.883-.993L5 3zm7 11a5 5 0 100-10 5 5 0 000 10z" /></svg>'
             };
-            return icons[shopId] || icons['cunah-culinary'];
+            // Default fallback icon (fork & spoon)
+            const fallback = '<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M7.5 2.5a1 1 0 00-1 1v5.638a2.204 2.204 0 01-1.5 2.105V17a1 1 0 001 1h1a1 1 0 001-1v-5.757a2.204 2.204 0 01-1.5-2.105V3.5a1 1 0 00-1-1zm5 .5a1 1 0 00-1 1V8a2 2 0 002 2h1a2 2 0 002-2V4a1 1 0 00-1-1h-3z"/></svg>';
+            return icons[shopId] || fallback;
         }
 
         // Load shops when page loads
