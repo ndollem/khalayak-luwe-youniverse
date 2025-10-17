@@ -96,7 +96,7 @@ khalayak-luwe/
 
 - **Font**: Poppins (Google Fonts)
 - **Warna Utama**: Gray-50 background, Gray-800 text
-- **Warna Lapak**: Blue, Green, Pink, Purple, Yellow (100 series)
+- **Warna Lapak**: Product-based themes - Orange (snacks), Emerald (meals), Amber (coffee), Red (spicy), Pink (sweets)
 - **Radius**: rounded-xl untuk card
 - **Shadow**: md dengan hover:lg
 - **Transition**: 300ms untuk smooth interaction
